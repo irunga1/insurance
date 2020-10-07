@@ -103,20 +103,20 @@
 					echo"</tr>";			
 						if($size2 ==1){
 							echo "<tr>";
-							echo"<td style ='border:1px solid gray; width:7cm;font-weight:700'>Descripcion</td>";
+							echo"<td style ='border:1px solid gray; width:7cm;font-weight:700'>Description</td>";
 							echo"<td style ='border:1px solid gray font-weight:700'>".$calculado[0]->nombre."</td>";
 							echo "</tr>";
 						}
 						if($size2 ==2){
 							echo "<tr>";
-							echo"<td style ='border:1px solid gray>; width:7cm; font-weight:700'>Descripcion</td>";
+							echo"<td style ='border:1px solid gray>; width:7cm; font-weight:700'>Description</td>";
 							echo"<td style ='border:1px solid gray>; font-weight:700'>".$calculado[0]->nombre."</td>";
 							echo"<td style ='border:1px solid gray>; font-weight:700'>".$calculado[1]->nombre."</td>";
 							echo "</tr>";
 						}
 						if($size2 ==3){
 							echo "<tr>";
-							echo"<td style ='border:1px solid gray; width:7cm; font-weight:700'>Descripcion</td>";
+							echo"<td style ='border:1px solid gray; width:7cm; font-weight:700'>Description</td>";
 							echo"<td style ='border:1px solid gray; font-weight:700'>".$calculado[0]->nombre."</td>";
 							echo"<td style ='border:1px solid gray; font-weight:700'>".$calculado[1]->nombre."</td>";
 							echo"<td style ='border:1px solid gray; font-weight:700'>".$calculado[2]->nombre."</td>";
@@ -373,11 +373,11 @@
 		<div style="width:18.4cm">
 			<br><br>
 			<small>
-				<strong>Observaciones Importantes</strong>
+				<strong>Additional Info</strong>
 				<ul>
-					<li>Tomar en cuenta que el valor de las unidades quedan sujetas a inspección</li>
-					<li>No cubre robo parcial de piezas de vehículo,asi mismo tampoco el robo parcial de equipos de audio y video. Se pueden incluir en la prima</li>
-					<li>Se encuentra EXCLUIDO conductores en estado de ebriedad</li>					
+					<li>Lorem Ipsum</li>
+					<li>Lorem Ipsum</li>
+					<li>Lorem Ipsum</li>					
 				</ul>
 			</small>
 		</div>			
