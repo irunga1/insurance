@@ -19,7 +19,7 @@
 			<br>
 			<img class="listimg" src="<?php echo base_url("assets/uploads/files/$it->logotipo"); ?>" alt="">
 			<hr>
-			<small>Comparar</small><br>
+			<small>Compare</small><br>
 			<input value="<?php echo$it->aseguradora_id; ?>" aseguradora="<?php echo$it->aseguradora_id; ?>"
 				type="checkbox" name="aseguradora" id="as-<?php echo $x ?>" class="compare" value="1"
 				tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>">
