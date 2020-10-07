@@ -93,7 +93,8 @@
 					$personal[0]->clase_seguro = trim($personal[0]->clase_seguro);
 					$display =($personal[0]->clase_seguro=="Seguro Terceros")?"display:none!important;":"";
 					$isMargin = ($size>2)?"margin-top:-1cm;":"margin-top:1cm";
-					$isCol1 = (count($calculado) > 1)?"Comparativo de ":"";
+					// $isCol1 = (count($calculado) > 1)?"Comparativo de ":"";
+					$isCol1 = (count($calculado) > 1)?"Comparing":"";
 
 					echo "<div style='$isMargin'><span style=' font-size:19px!important; font-weight:700!important;';padding-top:0cm;>$isCol1 Coverages and Benefits</span></div>";
 					echo "<table class='tabla' style='$display width:18cm; '>";
