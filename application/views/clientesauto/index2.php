@@ -160,9 +160,10 @@
 				</div>
 			</div> -->
 			<div class="col-md-">
-				<button class="btn btn-info col-md-3" id="enviar">
+				<!-- <button class="btn btn-info col-md-3" id="enviar">
 					<i class="glyphicon glyphicon-cloud-upload"></i> Quote Now
-				</button>
+				</button> -->
+
 			</div>
 		</div>
 	</div>
@@ -171,6 +172,10 @@
 
 
 <div style="overflow:auto;">
+
+	<button class="btn btn-info col-md-3" id="enviar">
+		<i class="glyphicon glyphicon-cloud-upload"></i> Quote Now
+	</button>			
 	<div style="float:right;margin-top: 10px;">
 		<button type="button" class="btn btn-success" id="prevBtn" onclick="nextPrev(-1)">Prev</button>
 		<button type="button" class="btn btn-success" id="nextBtn" onclick="nextPrev(1)">Next</button>
@@ -207,6 +212,10 @@
 
 	.input-group-addon {
 		border-radius: 0 !important;
+	}
+	#enviar{
+		display: none;
+		margin-top: 10px;
 	}
 
 	.alert {
@@ -337,13 +346,17 @@
 		// ... and fix the Previous/Next buttons:
 		if (n == 0) {
 			document.getElementById("prevBtn").style.display = "none";
+			document.getElementById("nextBtn").style.display = "inline";
+			
 		} else {
 			document.getElementById("prevBtn").style.display = "inline";
+			document.getElementById("enviar").style.display = "inline-block";
 		}
 		if (n == (x.length - 1)) {
 			document.getElementById("nextBtn").style.display = "none";
 		} else {
 			document.getElementById("nextBtn").innerHTML = "Next";
+			document.getElementById("enviar").style.display = "none";
 		}
 		// ... and run a function that displays the correct step indicator:
 		fixStepIndicator(n)
