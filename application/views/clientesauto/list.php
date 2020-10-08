@@ -43,7 +43,7 @@
 			<small><strong>10 payments of <br> $. <?php echo $primatotal; ?> </strong></small><br><br>
 			<span pagos="<?php echo $primatotal2;  ?>"  pma="<?php echo number_format($it->precio_contado, 2, '.', ',');?>" tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>"
 					ase="<?php echo$it->aseguradora_id; ?>" class="btn btn-success btn-sm btncomprar"
-					data-toggle="modal" data-target="#exampleModal" aseg="<?php echo $it->nombre; ?>">Comprar</span>
+					data-toggle="modal" data-target="#exampleModal" aseg="<?php echo $it->nombre; ?>">Buy Now!</span>
 			<!-- <small>Comparar</small><br>
 			<input value="<?php echo$it->aseguradora_id; ?>" aseguradora="<?php echo$it->aseguradora_id; ?>"
 				type="checkbox" name="aseguradora" id="as-<?php echo $x ?>" class="compare" value="1"
@@ -80,7 +80,7 @@
 
 			</div>
 			<div class="modal-body">
-				Thanks <strong><?php echo $post["Nombre"] ?></strong>  for prefeer our brands. Please confirm this data <span id="aseg"></span>. <br>
+				Thanks <strong><?php echo $post["Nombre"] ?></strong>  for prefeer our insurance brands. Your choice is :  <span id="aseg"></span>. <br>
 				<div class="formContainer">
 					<div class="row nRow">
 						<div class="col-md-3">
@@ -123,7 +123,7 @@
 					<div class="row">
 						<div class="col-md-3">
 							<div class="form-group">
-								<label for="">Vehículo: </label> <input type="text" class="form-control nhov" value ="<?php echo $post2[0][8]; ?>" readonly > 
+								<label for="">Vehicle: </label> <input type="text" class="form-control nhov" value ="<?php echo $post2[0][8]; ?>" readonly > 
 							</div>
 						</div>
 						<div class="col-md-3">
@@ -157,14 +157,14 @@
 					
 				</div>
 				<p>
-					Al final se te enviará un correo con los datos,  por favor si no aparece en la bandeja de entrada revisa en la bandeja de spam. En breve te contactara uno de nuestros asesores.
+				You will receive at your mail the selected insurance quote. Thanks  for prefeer our products
 				</p>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 				<button type="button" class="btn btn-primary" id="sndMail" email="<?php echo $post["Email"]; ?>">Comprar</button>
 				<span id="loader"><img src="<?php echo base_url("public/img/48x48.gif") ?>" alt="" ><small>Enviando...</small></span>
-				<small id="snd1">Correo Enviado</small>
+				<small id="snd1">The mail was send it</small>
 			</div>
 		</div>
 	</div>
