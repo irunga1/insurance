@@ -42,7 +42,9 @@
 				<div><input class="info" type="text" value="<?php echo $personal[0]->nombremarca; ?>"></div>
 				<div><input class="info" type="text" value="<?php echo $personal[0]->descripcion; ?>"></div>
 				<div><input class="info" type="text" value="<?php echo "Q. ".number_format($personal[0]->montoasegurado, 2, '.', ',');  ?>"></div>
-				<div><input class="info" type="text" value="<?php echo $personal[0]->clase_seguro; ?>"></div>
+				<?php $show = ($personal[0]->clase_seguro =="Seguro Completo")?"Complete Insurance":"3rd Person Insurance"; ?>
+				<!-- <div><input class="info" type="text" value="<?php echo $personal[0]->clase_seguro; ?>"></div> -->
+				<div><input class="info" type="text" value="<?php echo $show; ?>"></div>
 			</div>			
 			<div class="mycol mycol-4" style ='height:3.5cm'>
 				<div><input class="info" type="text" value="Quotation: <?php echo $personal[0]->idcot ;?>"></div>
@@ -76,9 +78,9 @@
 				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">Recargo 10  Pagos</span>            <span style="text-align:right!important;" class="info1 num<?php //echo $size; ?>"><?php //echo "Q ". $calculado[$i]->recargos; ?></span></div>
 				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">Asistencia</span>                   <span style="text-align:right!important;" class="info1 num<?php //echo $size; ?>"><?php //echo "Q ". $calculado[$i]->asistencia; ?></span></div>
 				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">IVA</span>                          <span style="text-align:right!important;" class="info1 num<?php //echo $size; ?>"><?php //echo "Q ". $calculado[$i]->iva; ?></span></div> -->
-				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">Prima Total 10 Pagos:</span>         <span style="text-align:right!important;" class="info1 num<?php echo $size; ?>"><?php echo "Q ".  $calculado[$i]->primatotal; ?></span></div>
-				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">O 10 Pagos de:</span>         <span style="text-align:right!important;" class="info1 num<?php echo $size; ?>"><?php echo "Q ". number_format(($calculado[$i]->primatotal/10), 2, '.', '') ; ?></span></div>
-				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">Prima Total de Contado:</span>    <span style="text-align:right!important;" class="info1 num<?php echo $size; ?>"><?php  echo "Q ". $calculado[$i]->precio_contado; ?></span></div>
+				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">Total Premium Fee for 10 Monthly payments:</span>         <span style="text-align:right!important;" class="info1 num<?php echo $size; ?>"><?php echo "Q ".  $calculado[$i]->primatotal; ?></span></div>
+				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">Montly Fee :</span>         <span style="text-align:right!important;" class="info1 num<?php echo $size; ?>"><?php echo "Q ". number_format(($calculado[$i]->primatotal/10), 2, '.', '') ; ?></span></div>
+				<div><span style="text-align:left!important;" class="lbl<?php echo $size; ?>">Total Fee One Pay:</span>    <span style="text-align:right!important;" class="info1 num<?php echo $size; ?>"><?php  echo "Q ". $calculado[$i]->precio_contado; ?></span></div>
 				<!-- <br> -->
 				<!-- <div><span style="text-align:left!important;" class='lbl<?php //echo $size; ?>'>Deducible Robo</span>                <span style="text-align:right!important;" class="info1 num<?php //echo $size ?>"><?php //echo "Q ".   $calculado[$i]->deducible_robo ?> </span></div>				
 				<div><span style="text-align:left!important;" class='lbl<?php //echo $size; ?>'>Deducible Daños</span>               <span style="text-align:right!important;" class="info1 num<?php //echo $size; ?>"><?php  //echo "Q ".  $calculado[$i]->deducible_danos ?></span></div>				 -->
@@ -282,9 +284,9 @@
 				?>
 				</table>
 				<footer>
-					<div class="mycol mycol-4"><small>¡Estamos para servirle!</small></div>
-					<div class="mycol mycol-4" style='text-align:center;'><small>Pagina #1</small></div>
-					<div class="mycol mycol-4" style="text-align:right;border:none!important" ><small> www.protegemos.com.gt </small></div>
+					<div class="mycol mycol-4"><small>¡Lorem Ipsum!</small></div>
+					<div class="mycol mycol-4" style='text-align:center;'><small>Page #1</small></div>
+					<div class="mycol mycol-4" style="text-align:right;border:none!important" ><small> www.loremipsum.com </small></div>
 				</footer>
 				<div style="page-break-before: always"></div>
 				<div class="top" style='width:17.2cm;'  >
@@ -302,20 +304,20 @@
 					echo"</tr>";
 						if($size2 ==1){
 							echo "<tr>";
-							echo"<td style ='border:1px solid gray; width:7cm;font-weight:700'>Descripcion</td>";
+							echo"<td style ='border:1px solid gray; width:7cm;font-weight:700'>Description</td>";
 							echo"<td style ='border:1px solid gray;font-weight:700'>".$calculado[0]->nombre."</td>";
 							echo "</tr>";
 						}
 						if($size2 ==2){
 							echo "<tr>";
-							echo"<td style ='border:1px solid gray; width:7cm; font-weight:700'>Descripcion</td>";
+							echo"<td style ='border:1px solid gray; width:7cm; font-weight:700'>Description</td>";
 							echo"<td style ='width:5.5cm;border:1px solid gray; font-weight:700'>".$calculado[0]->nombre."</td>";
 							echo"<td style ='width:5.5cm;border:1px solid gray; font-weight:700'>".$calculado[1]->nombre."</td>";
 							echo "</tr>";
 						}
 						if($size2 ==3){
 							echo "<tr>";
-							echo"<td style ='border:1px solid gray; width:7cm; font-weight:700'>Descripcion</td>";
+							echo"<td style ='border:1px solid gray; width:7cm; font-weight:700'>Description</td>";
 							echo"<td style ='width:3.66cm; border:1px solid gray; font-weight:700'>".$calculado[0]->nombre."</td>";
 							echo"<td style ='width:3.66cm; border:1px solid gray; font-weight:700'>".$calculado[1]->nombre."</td>";
 							echo"<td style ='width:3.66cm; border:1px solid gray; font-weight:700'>".$calculado[2]->nombre."</td>";
@@ -386,9 +388,9 @@
 
 	</div>
 	<footer>
-		<div class="mycol mycol-4"><small>¡Estamos para servirles!</small></div>
-		<div class="mycol mycol-4" style='text-align:center;'><small>Pagina #2</small></div>
-		<div class="mycol mycol-4" style="text-align:right; border:none!important"><small> www.protegemos.com.gt </small></div>
+		<div class="mycol mycol-4"><small>¡Lorem Ipsum!</small></div>
+		<div class="mycol mycol-4" style='text-align:center;'><small>Page #1</small></div>
+		<div class="mycol mycol-4" style="text-align:right;border:none!important" ><small> www.loremipsum.com </small></div>
 	</footer>
 
 </body>

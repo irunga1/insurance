@@ -139,7 +139,7 @@ class Clienteautos extends CI_Controller{
 				$data["personal"][0]->idcot = $idcot;
 				$data["personal"][0]->fecha = date('d/m/Y');
 				$data["personal"][0]->telefono = "23278888";
-				$data["personal"][0]->mail = "protegemosenlinea@protegemos.com.gt";
+				$data["personal"][0]->mail = "info@loremipsum.com";
 
 				$data['calculado'] = $this->cam->getDataPdf($idcot);
 				$data['iab'] = $this->cam->getIAB($idcot);

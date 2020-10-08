@@ -129,12 +129,13 @@
 	</div>
 	<div class="form-group">
 		<?php 
-				$cont=0;
+				$cont=0;				
 				foreach($clasesguro as $it){
+					$show = ($it->nombre == "Seguro Completo")?"Complete Insurance":"Insurance to 3rd Person";
 					$test = ($cont==0)?"checked":"";
 					$str ="<div class='sinline'>";
 					$str .="";
-					$str .="    <input $test type='radio' name ='clase_seguro' value='$it->nombre' name='optradio'> $it->nombre";
+					$str .="    <input $test type='radio' name ='clase_seguro' value='$it->nombre' name='optradio'> $show";
 					$str .="";
 					$str .=" ";
 					$str.="</div>";
