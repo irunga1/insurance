@@ -271,6 +271,7 @@ class Clienteautos extends CI_Controller{
                     "pdfurl"=>$urlpdf,
 				);
 				$this->cam->updateCotizacion($data,$idcot);
+				echo "<pre>";
 				print_r($this->email);
                 echo "enviado";
             }            
