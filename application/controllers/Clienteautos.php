@@ -1,6 +1,5 @@
 <?php 
-class Clienteautos extends CI_Controller{
-	
+class Clienteautos extends CI_Controller{	
     public function __construct(){
 		parent::__construct();
 		$this->load->library("Util");
@@ -11,8 +10,7 @@ class Clienteautos extends CI_Controller{
 		$this->load->model("Clientesauto_model","cam");
     }
     public function index(){
-		// echo   'http://'.$_SERVER['HTTP_HOST'];die();
-		
+		// echo   'http://'.$_SERVER['HTTP_HOST'];die();		
         $data['marcas'] = $this->cam->getAutos();
         $data['clasesguro'] = $this->cam->getClaseSeguro();
         $data['tipovehiculo'] = $this->cam->getTipoVehiculo();
@@ -273,6 +271,7 @@ class Clienteautos extends CI_Controller{
                     "pdfurl"=>$urlpdf,
 				);
 				$this->cam->updateCotizacion($data,$idcot);
+				print_r($this->email);
                 echo "enviado";
             }            
         }
